@@ -1,6 +1,6 @@
 default: docker_build
 
-DOCKER_IMAGE ?= quay.io/sggncucumber/croc-hunter
+DOCKER_IMAGE ?= quay.io/lachie83/croc-hunter
 BUILD_NUMBER ?= `git rev-parse --short HEAD`
 VCS_REF ?= `git rev-parse --short HEAD`
 
