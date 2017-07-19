@@ -2,7 +2,7 @@
 
 // load pipeline functions
 // Requires pipeline-github-lib plugin to load library from github
-@Library('github.com/sggncucumber/jenkins-pipeline@master')
+@Library('github.com/lachie83/jenkins-pipeline@master')
 def pipeline = new io.estrado.Pipeline()
 
 podTemplate(label: 'jenkins-pipeline', containers: [
