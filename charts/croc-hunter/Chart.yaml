@@ -1,9 +1,9 @@
 name: croc-hunter
-home: https://github.com/lachie83/croc-hunter
+home: https://github.com/sggncucumber/croc-hunter
 version: 0.3.0
 description: Live out your dream hunting Crocs
 sources:
-  - https://github.com/lachie83/croc-hunter
+  - https://github.com/sggncucumber/croc-hunter
 maintainers:
   - name: Lachlan Evenson
     email: lachlan.evenson@gmail.com
