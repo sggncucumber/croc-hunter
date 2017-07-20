@@ -4,7 +4,7 @@
 
 Master:
   Memory: "512Mi"
-  HostName: jenkins.acs.az.estrado.io
+  HostName: jenkins.retailmetrx.com
   ServiceType: ClusterIP
   InstallPlugins:
       - kubernetes:0.11 
@@ -27,9 +27,9 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenkins.acs.az.estrado.io
+      - secretName: jenkins.retailmetrx.com
         hosts:
-          - jenkins.acs.az.estrado.io
+          - jenkins.retailmetrx.com
 
 Agent:
   Enabled: false

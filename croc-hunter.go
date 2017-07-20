@@ -47,6 +47,7 @@ const (
 				<strong>Release: </strong>%s<br>
 				<strong>Commit: </strong>%s<br>
 				<strong>Powered By: </strong>%s<br>
+				<strong>GanesanS</strong>
 				</div>
 			</body>
 		</html>

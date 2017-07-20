@@ -21,7 +21,7 @@ helm repo update
 
 ## Fork repo
 ``` 
-https://github.com/lachie83/croc-hunter#fork-destination-box
+https://github.com/sggncucumber/croc-hunter#fork-destination-box
 ```
 
 ## Install Kube Lego chart
@@ -47,7 +47,7 @@ or *.test.com in A <nginx ingress svc external-IP>
 
 ## Update jenkins.values.yaml
 ```
-Find and replace `jenkins.acs.az.estrado.io` with the DNS name provisioned above
+Find and replace `jenkins.retailmetrx.com` with the DNS name provisioned above
 
 helm --namespace jenkins --name jenkins -f ./jenkins-values.yaml install stable/jenkins
 
@@ -68,10 +68,10 @@ printf $(kubectl get secret --namespace jenkins jenkins-jenkins -o jsonpath="{.d
 
 If you're not using quay you can configure this to alternate locations in Jenkinsfile.json
 # Credentials > Jenkins > Global credentials > Add Credentials
-#   Username: lachie83
+#   Username: sggncucumber
 #   Password: ***
 #   ID: quay_creds
-#   Description: https://quay.io/user/lachie83
+#   Description: https://quay.io/user/sggncucumber
 
 # Open Blue Ocean
 # Create a new Pipeline
@@ -82,7 +82,7 @@ If you're not using quay you can configure this to alternate locations in Jenkin
 #     Token description: kubernetes-jenkins
 #   Generate token > Copy Token > Paste back in Jenkins  
 # Which organization does the repository belong to?
-#   lachie83
+#   sggncucumber
 # Create a single Pipeline or discover all Pipelines?
 #   New pipeline
 # Choose a repository
@@ -98,7 +98,7 @@ kubectl get pods --namespace jenkins
 ## Update Org to build PRs
 ```
 # Classic Jenkins
-# lachie83 (GitHub org)
+# sggncucumber (GitHub org)
 # Configure
 # Advanced
 #   Build origin PRs (merged with base branch)
@@ -110,7 +110,7 @@ kubectl get pods --namespace jenkins
 ``` 
 printf ${JENKINS_URL}/github-webhook/ | pbcopy
 
-# https://github.com/lachie83/croc-hunter/settings/hooks
+# https://github.com/sggncucumber/croc-hunter/settings/hooks
 # Add webhook
 #   Payload URL: <paste>
 # Which events would you like to trigger this webhook?
@@ -120,7 +120,7 @@ printf ${JENKINS_URL}/github-webhook/ | pbcopy
 
 ## Update croc-hunter ingress records
 ```
-Update croc-hunter.acs.az.estrado.io in charts/croc-hunter/values.yaml
+Update croc-hunter.retailmetrx.com in charts/croc-hunter/values.yaml
 
 Configured DNS A record to point to the Nginx Ingress IP
 Once master branch is pushed it should be available at that name
@@ -137,11 +137,11 @@ git push
 
 ### Building and releasing
 ```
-open ${JENKINS_URL}/blue/organizations/jenkins/lachie83%2Fcroc-hunter/activity/
+open ${JENKINS_URL}/blue/organizations/jenkins/sggncucumber%2Fcroc-hunter/activity/
 
 # dev branch builds
 
-open https://github.com/lachie83/croc-hunter
+open https://github.com/sggncucumber/croc-hunter
 
 # PR from dev to master
 # PR builds

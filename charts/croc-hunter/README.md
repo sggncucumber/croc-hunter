@@ -16,7 +16,7 @@ Download the latest release of the chart from the [releases](../../../releases) 
 Alternatively, clone the repo if you wish to use the development snapshot:
 
 ```bash
-$ git clone https://github.com/lachie83/croc-hunter/charts
+$ git clone https://github.com/sggncucumber/croc-hunter/charts
 ```
 
 ## Chart signing
@@ -42,7 +42,7 @@ The following tables lists the configurable parameters of the Spark chart and th
 |       Parameter       |           Description            |                         Default                          |
 |-----------------------|----------------------------------|----------------------------------------------------------|
 | `Name`            | app name                         | `croc-hunter`                                                |
-| `Image`           | Container image name             | `quay.io/lachie83/croc-hunter`                               |
+| `Image`           | Container image name             | `quay.io/sggncucumber/croc-hunter`                               |
 | `ImageTag`        | Container image tag              | `latest`                                                     |
 | `ImagePullPolicy` | Container pull policy            | `Always`                                                     |
 | `Replicas`        | k8s deployment replicas          | `3`                                                          |
